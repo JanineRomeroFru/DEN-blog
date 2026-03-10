@@ -5,32 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Ultimate 48-Hour Denver Itinerary — DEN Blog</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Adobe Fonts (Colfax): replace KIT_ID with your Typekit kit ID -->
+  <link rel="stylesheet" href="https://use.typekit.net/KIT_ID.css" />
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- UTILITY BAR -->
+  <div class="util-bar">
+    <div class="container util-bar-inner">
+      <a href="index.html" class="logo util-logo">
+        <img src="logo.svg" class="logo-icon" alt="DEN" />
+      </a>
+      <div class="util-links">
+        <a href="#">Contact</a>
+        <a href="#" class="util-lang">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          English &#9662;
+        </a>
+        <a href="#">Jobs</a>
+        <a href="#" class="btn-util-outline">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          Accessibility
+        </a>
+        <a href="#" class="btn-util-fill">Interactive Map</a>
+        <a href="#" class="util-search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">DEN<span class="logo-dot">.</span>BLOG</a>
       <nav class="nav">
-        <a href="#">Travel</a>
-        <a href="#">Culture</a>
-        <a href="#">Food &amp; Drink</a>
-        <a href="#">Tips</a>
         <a href="#">About</a>
+        <a href="#">Flights</a>
+        <a href="#">Security</a>
+        <a href="#">Parking and Transportation</a>
+        <a href="#">At the Airport</a>
+        <a href="#">Business and Community</a>
       </nav>
-      <a href="#" class="btn-nav">Subscribe</a>
     </div>
   </header>
 
   <!-- POST HERO -->
-  <section class="post-hero" style="background-image: url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1600&auto=format&fit=crop')">
+  <section class="post-hero" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&auto=format&fit=crop')">
     <div class="post-hero-overlay"></div>
-    <div class="container post-hero-content">
-      <span class="hero-tag">Travel</span>
+    <div class="post-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="index.html">Blog</a>
+        <span>&rsaquo;</span>
+        <span style="color:rgba(255,255,255,0.9)">48-Hour Denver Itinerary</span>
+      </div>
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Travel</span>
+      </div>
       <h1 class="hero-title">The Ultimate 48-Hour Denver Itinerary</h1>
     </div>
   </section>
@@ -42,9 +75,10 @@
       <!-- ARTICLE -->
       <article class="post-article">
         <div class="post-meta">
+          <span class="post-meta-category">Travel</span>
           <span class="card-author">By Maria Chen</span>
           <span>&bull;</span>
-          <span class="card-date">March 5, 2026</span>
+          <span>March 5, 2026</span>
           <span>&bull;</span>
           <span>8 min read</span>
         </div>
@@ -93,11 +127,22 @@
 
         <div class="sidebar-widget">
           <h3 class="sidebar-widget-title">Newsletter</h3>
-          <p style="font-size: 0.85rem; color: var(--gray-dark); margin-bottom: 16px;">New stories, travel tips, and Denver finds — delivered to your inbox.</p>
+          <p style="font-size: 0.85rem; color: var(--gray-dark); margin-bottom: 16px;">New stories and Denver finds, delivered to your inbox.</p>
           <form onsubmit="return false;" style="display:flex; flex-direction:column; gap:10px;">
-            <input type="email" class="newsletter-input" placeholder="your@email.com" style="width:100%;" />
-            <button type="submit" class="btn-primary" style="width:100%;">Subscribe</button>
+            <input type="email" class="newsletter-input" placeholder="your@email.com"
+              style="background:var(--off-white); border-color:var(--gray-light); color:var(--text);" />
+            <button type="submit" class="btn-primary" style="width:100%; text-align:center;">Subscribe</button>
           </form>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3 class="sidebar-widget-title">Airport Info</h3>
+          <ul class="sidebar-links">
+            <li><a href="#">Flight Status</a></li>
+            <li><a href="#">Parking &amp; Transportation</a></li>
+            <li><a href="#">Security Wait Times</a></li>
+            <li><a href="#">Terminal Map</a></li>
+          </ul>
         </div>
 
       </aside>
@@ -107,17 +152,78 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="logo">DEN<span class="logo-dot">.</span>BLOG</a>
-      <nav class="footer-nav">
-        <a href="#">Travel</a>
-        <a href="#">Culture</a>
-        <a href="#">Food &amp; Drink</a>
-        <a href="#">Tips</a>
-        <a href="#">About</a>
-        <a href="#">Privacy</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 DEN Blog. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-backtop">
+        <a href="#" class="btn-back-top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><path d="M5 17.5c0 1.7 1.4 2.5 3 2.5h8c1.6 0 3-.8 3-2.5M12 3v13M8 7l4-4 4 4"/></svg>
+          Back to Top
+        </a>
+      </div>
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="index.html" class="logo footer-logo-link">
+            <img src="logo.svg" class="logo-icon" alt="DEN" />
+        
+          </a>
+          <h4 class="footer-col-heading">Directions</h4>
+          <p class="footer-address">8500 Peña Blvd<br>Denver, Colorado 80249</p>
+          <a href="#" class="btn-customer-service">Customer Service</a>
+          <h4 class="footer-col-heading" style="margin-top:20px">About DEN Blog</h4>
+          <p class="footer-about-text">Stories, tips, and guides for travelers passing through — and falling in love with — Denver International Airport.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+          <div class="footer-accessibility-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="8" r="1.5" fill="currentColor"/><path d="M8 11h8M10 21l2-6 2 6M10 15h4"/></svg>
+            <p>Report Website<br><strong>Accessibility Issues</strong></p>
+          </div>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">Quick Links</div>
+          <a href="#">Security Wait Times and TSA Info</a>
+          <a href="#">Arrivals</a>
+          <a href="#">Departures</a>
+          <a href="#">Connections</a>
+          <a href="#">Parking Lots</a>
+          <a href="#">Getting To and From</a>
+          <a href="#">Rental Cars</a>
+          <a href="#">Wheelchairs</a>
+          <a href="#">Passenger Services and Amenities</a>
+          <a href="#">Dine Shop Relax</a>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">About DEN</div>
+          <a href="#">Airport Facilities and Grounds</a>
+          <a href="#">Vision 100 and Operation 2045</a>
+          <a href="#">Environmental, Social and Governance</a>
+          <a href="#">Equity, Diversity, Inclusion and Accessibility</a>
+          <a href="#">Executive Leadership</a>
+          <a href="#">Rules and Regulations</a>
+          <a href="#">Jobs</a>
+          <a href="#">Airport Safety</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">Business and Community</div>
+          <a href="#">Alternative Energy Solutions</a>
+          <a href="#">Business and Community</a>
+          <a href="#">Business Development Training Academy</a>
+          <a href="#">Center of Equity and Excellence in Aviation (CEEA)</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Noise and Airspace</a>
+          <a href="#">Real Estate</a>
+          <a href="#">Youth Programs and Internships</a>
+          <a href="#">Volunteering</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DEN Blog. All rights reserved.</span>
+        <span>Denver International Airport</span>
+      </div>
     </div>
   </footer>
 

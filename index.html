@@ -5,189 +5,489 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DEN Blog</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Adobe Fonts (Colfax): replace KIT_ID with your Typekit kit ID -->
+  <link rel="stylesheet" href="https://use.typekit.net/KIT_ID.css" />
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- UTILITY BAR -->
+  <div class="util-bar">
+    <div class="container util-bar-inner">
+      <a href="index.html" class="logo util-logo">
+        <img src="logo.svg" class="logo-icon" alt="DEN" />
+      </a>
+      <div class="util-links">
+        <a href="#">Contact</a>
+        <a href="#" class="util-lang">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          English &#9662;
+        </a>
+        <a href="#">Jobs</a>
+        <a href="#" class="btn-util-outline">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          Accessibility
+        </a>
+        <a href="#" class="btn-util-fill">Interactive Map</a>
+        <a href="#" class="util-search" aria-label="Search">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="logo">DEN<span class="logo-dot">.</span>BLOG</a>
       <nav class="nav">
-        <a href="#">Travel</a>
-        <a href="#">Culture</a>
-        <a href="#">Food &amp; Drink</a>
-        <a href="#">Tips</a>
         <a href="#">About</a>
+        <a href="#">Flights</a>
+        <a href="#">Security</a>
+        <a href="#">Parking and Transportation</a>
+        <a href="#">At the Airport</a>
+        <a href="#">Business and Community</a>
       </nav>
-      <a href="#" class="btn-nav">Subscribe</a>
     </div>
   </header>
+
+  <!-- EDITORIAL MASTHEAD -->
+  <div class="editorial-masthead">
+    <img src="logo.svg" class="editorial-masthead-watermark" aria-hidden="true" />
+    <div class="container editorial-masthead-inner">
+      <div class="editorial-masthead-top">
+        <div>
+          <div class="editorial-masthead-eyebrow">Denver International Airport</div>
+          <h2 class="editorial-masthead-title">DEN Blog</h2>
+          <p class="editorial-masthead-tagline">Your mile-high source for travel stories, airport news &amp; insider tips</p>
+        </div>
+        <div class="editorial-masthead-meta">
+          <span>47 stories</span>
+          <span class="editorial-meta-dot"></span>
+          <span>Updated weekly</span>
+        </div>
+      </div>
+      <div class="editorial-masthead-cats">
+        <span class="editorial-cat-label">Browse by topic</span>
+        <a href="#" class="editorial-cat-pill" data-filter="all">All</a>
+        <a href="#" class="editorial-cat-pill" data-filter="travel">Travel</a>
+        <a href="#" class="editorial-cat-pill" data-filter="culture">Culture</a>
+        <a href="#" class="editorial-cat-pill" data-filter="food-drink">Food &amp; Drink</a>
+        <a href="#" class="editorial-cat-pill" data-filter="tips-guides">Tips &amp; Guides</a>
+        <a href="#" class="editorial-cat-pill" data-filter="newsroom">Newsroom</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <span class="hero-tag">Featured</span>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span class="hero-eyebrow-text">Featured Story</span>
+      </div>
       <h1 class="hero-title">Discover What Makes Denver the Gateway to the West</h1>
-      <p class="hero-sub">From mountain escapes to urban culture — your guide starts here.</p>
-      <a href="post.html" class="btn-primary">Read the Story</a>
+      <p class="hero-sub">From mountain escapes to urban culture — your guide to everything DEN starts here.</p>
+      <a href="post.html" class="btn-primary">Read the Story &rarr;</a>
     </div>
   </section>
 
+
   <!-- MAIN CONTENT -->
-  <main class="main container">
+  <main class="main">
 
-    <!-- LATEST POSTS SECTION -->
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">Latest Stories</h2>
-        <a href="#" class="view-all">View All &rarr;</a>
+    <!-- LATEST: FEATURED + SIDE STACK -->
+    <div class="container">
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Latest Stories</h2>
+          <a href="#" class="link-arrow">View All Stories &rarr;</a>
+        </div>
+
+        <div class="featured-grid">
+
+          <!-- Featured card -->
+          <article class="card card--featured">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Travel</span>
+              <h3 class="card-title"><a href="post.html">The Ultimate 48-Hour Denver Itinerary</a></h3>
+              <p class="card-excerpt">Whether you're passing through or landing for the first time, here's everything you need to make the most of your time in the Mile High City.</p>
+              <div class="card-meta">
+                <span class="card-author">By Maria Chen</span>
+                <span>&bull;</span>
+                <span>March 5, 2026</span>
+                <span>&bull;</span>
+                <span>8 min read</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Side stack -->
+          <div class="side-stack">
+
+            <article class="card card--side">
+              <div class="card-img-wrap">
+                <a href="post.html">
+                  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1540339832862-474599807836?w=400&auto=format&fit=crop')"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Food &amp; Drink</span>
+                <h3 class="card-title"><a href="post.html">Top 10 Spots to Eat Near DEN</a></h3>
+                <div class="card-meta">
+                  <span>Feb 28, 2026</span>
+                </div>
+                <a href="post.html" class="card-read-more">Read More &rarr;</a>
+              </div>
+            </article>
+
+            <article class="card card--side">
+              <div class="card-img-wrap">
+                <a href="post.html">
+                  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=400&auto=format&fit=crop')"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Culture</span>
+                <h3 class="card-title"><a href="post.html">Art in Unexpected Places: A DEN Layover Guide</a></h3>
+                <div class="card-meta">
+                  <span>Feb 20, 2026</span>
+                </div>
+                <a href="post.html" class="card-read-more">Read More &rarr;</a>
+              </div>
+            </article>
+
+            <article class="card card--side">
+              <div class="card-img-wrap">
+                <a href="post.html">
+                  <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&auto=format&fit=crop')"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <span class="card-category">Travel</span>
+                <h3 class="card-title"><a href="post.html">Road Trips from Denver: 5 Routes Worth Taking</a></h3>
+                <div class="card-meta">
+                  <span>Feb 7, 2026</span>
+                </div>
+                <a href="post.html" class="card-read-more">Read More &rarr;</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- BLOG GRID with filter tabs -->
+    <div class="container">
+      <section class="section" id="all-stories" style="margin-bottom:0; padding-bottom:72px">
+        <div class="section-header">
+          <h2 class="section-title">All Stories</h2>
+        </div>
+
+        <div class="filter-tabs" id="filter-tabs">
+          <span class="filter-tab filter-tab--active" data-filter="all">All</span>
+          <span class="filter-tab filter-tab--inactive" data-filter="travel">Travel</span>
+          <span class="filter-tab filter-tab--inactive" data-filter="culture">Culture</span>
+          <span class="filter-tab filter-tab--inactive" data-filter="food-drink">Food &amp; Drink</span>
+          <span class="filter-tab filter-tab--inactive" data-filter="tips-guides">Tips &amp; Guides</span>
+          <span class="filter-tab filter-tab--inactive" data-filter="newsroom">Newsroom</span>
+        </div>
+
+        <div class="blog-grid" id="blog-grid">
+
+          <article class="card" data-category="tips-guides">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1581553673739-c4906b5d0de8?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Tips &amp; Guides</span>
+              <h3 class="card-title"><a href="post.html">How to Pack Light for a Rocky Mountain Adventure</a></h3>
+              <p class="card-excerpt">Less gear, more experience. A practical guide to smart packing for high-altitude trips.</p>
+              <div class="card-meta">
+                <span class="card-author">By Alex Kim</span>
+                <span>&bull;</span>
+                <span>Feb 14, 2026</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="food-drink">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Food &amp; Drink</span>
+              <h3 class="card-title"><a href="post.html">Green Chile: Colorado's Unsung Culinary Hero</a></h3>
+              <p class="card-excerpt">It's on everything. And once you try it, you'll understand why.</p>
+              <div class="card-meta">
+                <span class="card-author">By Jordan Lee</span>
+                <span>&bull;</span>
+                <span>Jan 30, 2026</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="newsroom">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Newsroom</span>
+              <h3 class="card-title"><a href="post.html">DEN Ranked Among Top 10 Airports in North America</a></h3>
+              <p class="card-excerpt">For the third year running, Denver International Airport earned top marks for passenger experience.</p>
+              <div class="card-meta">
+                <span class="card-author">DEN Newsroom</span>
+                <span>&bull;</span>
+                <span>Jan 22, 2026</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="travel">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Travel</span>
+              <h3 class="card-title"><a href="post.html">Winter Skiing: Best Resorts Within 2 Hours of DEN</a></h3>
+              <p class="card-excerpt">Skip the long drives. These world-class slopes are practically in Denver's backyard.</p>
+              <div class="card-meta">
+                <span class="card-author">By Maria Chen</span>
+                <span>&bull;</span>
+                <span>Jan 10, 2026</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="culture">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Culture</span>
+              <h3 class="card-title"><a href="post.html">The Story Behind DEN's Iconic Blue Mustang</a></h3>
+              <p class="card-excerpt">Love it or hate it, Blucifer has a story. Here's the full history of Denver's most controversial landmark.</p>
+              <div class="card-meta">
+                <span class="card-author">By Sam Rivera</span>
+                <span>&bull;</span>
+                <span>Dec 18, 2025</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+          <article class="card" data-category="tips-guides">
+            <div class="card-img-wrap">
+              <a href="post.html">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="card-category">Tips &amp; Guides</span>
+              <h3 class="card-title"><a href="post.html">Traveling with Kids Through DEN: A Parent's Guide</a></h3>
+              <p class="card-excerpt">Family-friendly tips for navigating one of the country's busiest airports without losing your mind.</p>
+              <div class="card-meta">
+                <span class="card-author">By Alex Kim</span>
+                <span>&bull;</span>
+                <span>Dec 5, 2025</span>
+              </div>
+              <a href="post.html" class="card-read-more">Read More &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- INFO BAND (full-bleed off-white) -->
+    <div class="info-band">
+      <div class="container">
+        <h2 class="section-title-centered">Airport Info &amp; Quick Links</h2>
+        <div class="info-grid">
+
+          <div class="info-card">
+            <div class="info-card-img-wrap">
+              <a href="post.html">
+                <div class="info-card-img" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="info-card-body">
+              <h3 class="info-card-title">Flights &amp; Departures</h3>
+              <p class="info-card-text">Real-time flight status, departures, arrivals, and connections — all in one place.</p>
+              <a href="#" class="link-arrow">View Flight Info &rarr;</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-img-wrap">
+              <a href="post.html">
+                <div class="info-card-img" style="background-image: url('https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="info-card-body">
+              <h3 class="info-card-title">Parking &amp; Transportation</h3>
+              <p class="info-card-text">Find the best parking options, shuttle routes, and ground transportation from DEN.</p>
+              <a href="#" class="link-arrow">Plan Your Trip &rarr;</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card-img-wrap">
+              <a href="post.html">
+                <div class="info-card-img" style="background-image: url('https://images.unsplash.com/photo-1559067096-49ebca3406aa?w=600&auto=format&fit=crop')"></div>
+              </a>
+            </div>
+            <div class="info-card-body">
+              <h3 class="info-card-title">Food &amp; Shops at DEN</h3>
+              <p class="info-card-text">From local Colorado favorites to international brands, explore what's available at the airport.</p>
+              <a href="#" class="link-arrow">Explore the Terminal &rarr;</a>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="card-grid">
+    </div>
 
-        <article class="card card--large">
-          <a href="post.html" class="card-img-link">
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&auto=format&fit=crop')"></div>
-          </a>
-          <div class="card-body">
-            <span class="card-tag">Travel</span>
-            <h3 class="card-title"><a href="post.html">The Ultimate 48-Hour Denver Itinerary</a></h3>
-            <p class="card-excerpt">Whether you're passing through or landing for the first time, here's everything you need to make the most of your time in the Mile High City.</p>
-            <div class="card-meta">
-              <span class="card-author">By Maria Chen</span>
-              <span class="card-date">March 5, 2026</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <a href="post.html" class="card-img-link">
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&auto=format&fit=crop')"></div>
-          </a>
-          <div class="card-body">
-            <span class="card-tag">Food &amp; Drink</span>
-            <h3 class="card-title"><a href="post.html">Top 10 Spots to Eat Near DEN</a></h3>
-            <p class="card-excerpt">Great food shouldn't wait until you land. These picks are worth arriving early for.</p>
-            <div class="card-meta">
-              <span class="card-author">By Jordan Lee</span>
-              <span class="card-date">Feb 28, 2026</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <a href="post.html" class="card-img-link">
-            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=600&auto=format&fit=crop')"></div>
-          </a>
-          <div class="card-body">
-            <span class="card-tag">Culture</span>
-            <h3 class="card-title"><a href="post.html">Art in Unexpected Places: A DEN Layover Guide</a></h3>
-            <p class="card-excerpt">Denver International Airport is home to some of the most striking public art in the country. Here's what to look for.</p>
-            <div class="card-meta">
-              <span class="card-author">By Sam Rivera</span>
-              <span class="card-date">Feb 20, 2026</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- HIGHLIGHT STRIP -->
-    <section class="highlight-strip">
-      <div class="highlight-inner">
-        <span class="highlight-label">Now Reading</span>
-        <p class="highlight-quote">"Denver isn't just a stopover. It's a destination worth slowing down for."</p>
-      </div>
-    </section>
-
-    <!-- MORE STORIES -->
-    <section class="section">
-      <div class="section-header">
-        <h2 class="section-title">More Stories</h2>
-      </div>
-      <div class="list-posts">
-
-        <article class="list-card">
-          <a href="post.html" class="list-card-img-link">
-            <div class="list-card-img" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&auto=format&fit=crop')"></div>
-          </a>
-          <div class="list-card-body">
-            <span class="card-tag">Tips</span>
-            <h3 class="list-card-title"><a href="post.html">How to Pack Light for a Rocky Mountain Adventure</a></h3>
-            <p class="list-card-excerpt">Less gear, more experience. A practical guide to smart packing for high-altitude trips.</p>
-            <div class="card-meta">
-              <span class="card-author">By Alex Kim</span>
-              <span class="card-date">Feb 14, 2026</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="list-card">
-          <a href="post.html" class="list-card-img-link">
-            <div class="list-card-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&auto=format&fit=crop')"></div>
-          </a>
-          <div class="list-card-body">
-            <span class="card-tag">Travel</span>
-            <h3 class="list-card-title"><a href="post.html">Road Trips from Denver: 5 Routes Worth Taking</a></h3>
-            <p class="list-card-excerpt">From Rocky Mountain National Park to Mesa Verde — these drives are the main event.</p>
-            <div class="card-meta">
-              <span class="card-author">By Maria Chen</span>
-              <span class="card-date">Feb 7, 2026</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="list-card">
-          <a href="post.html" class="list-card-img-link">
-            <div class="list-card-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&auto=format&fit=crop')"></div>
-          </a>
-          <div class="list-card-body">
-            <span class="card-tag">Food &amp; Drink</span>
-            <h3 class="list-card-title"><a href="post.html">Green Chile: Colorado's Unsung Culinary Hero</a></h3>
-            <p class="list-card-excerpt">It's on everything. And once you try it, you'll understand why.</p>
-            <div class="card-meta">
-              <span class="card-author">By Jordan Lee</span>
-              <span class="card-date">Jan 30, 2026</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- NEWSLETTER SIGNUP -->
+    <!-- NEWSLETTER (full-bleed) -->
     <section class="newsletter">
-      <div class="newsletter-inner">
-        <h2 class="newsletter-title">Stay in the Loop</h2>
-        <p class="newsletter-sub">New stories, travel tips, and Denver finds — delivered to your inbox.</p>
-        <form class="newsletter-form" onsubmit="return false;">
-          <input type="email" class="newsletter-input" placeholder="your@email.com" />
-          <button type="submit" class="btn-primary">Subscribe</button>
-        </form>
-      </div>
+      <h2 class="newsletter-title">Stay in the Loop</h2>
+      <p class="newsletter-sub">New stories, travel tips, and Denver finds — delivered to your inbox.</p>
+      <form class="newsletter-form" onsubmit="return false;">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" />
+        <button type="submit" class="btn-newsletter">Subscribe</button>
+      </form>
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <a href="index.html" class="logo">DEN<span class="logo-dot">.</span>BLOG</a>
-      <nav class="footer-nav">
-        <a href="#">Travel</a>
-        <a href="#">Culture</a>
-        <a href="#">Food &amp; Drink</a>
-        <a href="#">Tips</a>
-        <a href="#">About</a>
-        <a href="#">Privacy</a>
-      </nav>
-      <p class="footer-copy">&copy; 2026 DEN Blog. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-backtop">
+        <a href="#" class="btn-back-top">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align:-2px;margin-right:6px"><path d="M5 17.5c0 1.7 1.4 2.5 3 2.5h8c1.6 0 3-.8 3-2.5M12 3v13M8 7l4-4 4 4"/></svg>
+          Back to Top
+        </a>
+      </div>
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="index.html" class="logo footer-logo-link">
+            <img src="logo.svg" class="logo-icon" alt="DEN" />
+
+          </a>
+          <h4 class="footer-col-heading">Directions</h4>
+          <p class="footer-address">8500 Peña Blvd<br>Denver, Colorado 80249</p>
+          <a href="#" class="btn-customer-service">Customer Service</a>
+          <h4 class="footer-col-heading" style="margin-top:20px">About DEN Blog</h4>
+          <p class="footer-about-text">Stories, tips, and guides for travelers passing through — and falling in love with — Denver International Airport.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          </div>
+          <div class="footer-accessibility-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="8" r="1.5" fill="currentColor"/><path d="M8 11h8M10 21l2-6 2 6M10 15h4"/></svg>
+            <p>Report Website<br><strong>Accessibility Issues</strong></p>
+          </div>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">Quick Links</div>
+          <a href="#">Security Wait Times and TSA Info</a>
+          <a href="#">Arrivals</a>
+          <a href="#">Departures</a>
+          <a href="#">Connections</a>
+          <a href="#">Parking Lots</a>
+          <a href="#">Getting To and From</a>
+          <a href="#">Rental Cars</a>
+          <a href="#">Wheelchairs</a>
+          <a href="#">Passenger Services and Amenities</a>
+          <a href="#">Dine Shop Relax</a>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">About DEN</div>
+          <a href="#">Airport Facilities and Grounds</a>
+          <a href="#">Vision 100 and Operation 2045</a>
+          <a href="#">Environmental, Social and Governance</a>
+          <a href="#">Equity, Diversity, Inclusion and Accessibility</a>
+          <a href="#">Executive Leadership</a>
+          <a href="#">Rules and Regulations</a>
+          <a href="#">Jobs</a>
+          <a href="#">Airport Safety</a>
+          <a href="#">Sitemap</a>
+        </div>
+        <div class="footer-nav-group">
+          <div class="footer-nav-group-title">Business and Community</div>
+          <a href="#">Alternative Energy Solutions</a>
+          <a href="#">Business and Community</a>
+          <a href="#">Business Development Training Academy</a>
+          <a href="#">Center of Equity and Excellence in Aviation (CEEA)</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Noise and Airspace</a>
+          <a href="#">Real Estate</a>
+          <a href="#">Youth Programs and Internships</a>
+          <a href="#">Volunteering</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 DEN Blog. All rights reserved.</span>
+        <span>Denver International Airport</span>
+      </div>
     </div>
   </footer>
 
+  <script>
+    const tabs = document.querySelectorAll('#filter-tabs .filter-tab');
+    const pills = document.querySelectorAll('.editorial-cat-pill');
+    const cards = document.querySelectorAll('#blog-grid .card');
+    const blogGrid = document.getElementById('blog-grid');
+
+    function applyFilter(filter) {
+      // sync tabs
+      tabs.forEach(t => {
+        t.classList.toggle('filter-tab--active', t.dataset.filter === filter);
+        t.classList.toggle('filter-tab--inactive', t.dataset.filter !== filter);
+      });
+      // sync pills
+      pills.forEach(p => p.classList.toggle('active', p.dataset.filter === filter));
+      // filter cards
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => applyFilter(tab.dataset.filter));
+    });
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', e => {
+        e.preventDefault();
+        applyFilter(pill.dataset.filter);
+        document.getElementById('all-stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>
